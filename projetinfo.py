@@ -41,4 +41,9 @@ def update_p(letter,p):
 
 
 print(display_map_and_char(map,dico,(update_p(d,perso))))
+
+while True:
+    lettre= input("Quel lettre?")
+    print(display_map_and_char(map,dico,(update_p(lettre,perso))))
+    
     
