@@ -39,6 +39,7 @@ def update_p(letter,p,m):
     else: update_p(input("Quel déplacement (z,q,s ou d stp)?"),p,m)
     return p
 
+#rajouter test dans update pour s'arrêter devant le mur (même principe que les limites)
 
 
 print(display_map_and_char(map,dico,(update_p(d,perso))))
