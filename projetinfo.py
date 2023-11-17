@@ -21,7 +21,7 @@ def create_perso(dep):
 def display_map_and_char(m,d,p):
     for i in range(len(m)):
         for j in range(len(m[0])):
-            if i==p['x'] and j==p['y']: print(p['char'], end='')
+            if j==p['x'] and i==p['y']: print(p['char'], end='')
             else :print(d[m[i][j]], end='')
         print()
     return ''
