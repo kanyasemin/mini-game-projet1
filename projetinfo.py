@@ -31,11 +31,12 @@ print(display_map_and_char(map,dico,perso))
 d=input("Quel déplacement ?")
 # on dit que 'z' déplace le perso vers le haut, 'q' vers la gauche, 's' vers le bas et 'd' vers la droite
 def update_p(letter,p,m):
-    if letter=='z' and p['y']!=0:p["y"]-=1
-    elif letter=='q'and p['x']!=0: p["x"]-=1
+    if letter=='z' and p['y']>0:p["y"]-=1
+    elif letter=='q'and p['x']>0: p["x"]-=1
     elif letter=='s'and p['y']<len(m)-1: p["y"]+=1 
     elif letter=='d'and p['x']<len(m[0])-1: p['x']+=1
-    else: update_p(input("Quel déplacement (z,q,s ou d stp)?"),p)
+    #on fait une autre elif afin d'afficher le maps encore une fois 
+    else: update_p(input("Quel déplacement (z,q,s ou d stp)?"),p,m)
     return p
 
 
@@ -44,6 +45,6 @@ print(display_map_and_char(map,dico,(update_p(d,perso))))
 
 while True:
     lettre= input("Quel lettre?")
-    print(display_map_and_char(map,dico,(update_p(lettre,perso))))
+    print(display_map_and_char(map,dico,(update_p(lettre,perso,map))))
     
     
