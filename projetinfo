@@ -9,7 +9,7 @@ def display_map(m,d):
 
 map=[[0,0,0,1,1],[0,0,0,0,1],[1,1,0,0,0],[0,0,0,0,0]]
 dico={0:' ',1:'#'}
-#print(display_map(map,dico))
+print(display_map(map,dico))
 
 #pour faire un dictionnaire à partir des coordonnées du personnages et de comment on représente le personnage dans l'espace
 def create_perso(dep):
@@ -37,6 +37,8 @@ def update_p(letter,p):
     elif letter=='d'and p['x']!=-1: p['y']+=1
     else: update_p(input("Quel déplacement ?"),p)
     return p
+
+
 
 print(display_map_and_char(map,dico,(update_p(d,perso))))
     
