@@ -35,7 +35,7 @@ def update_p(letter,p):
     elif letter=='q'and p['y']!=0: p["y"]-=1
     elif letter=='s'and p['x']!=-1: p["x"]+=1
     elif letter=='d'and p['x']!=-1: p['y']+=1
-    else: update_p(input("Quel déplacement ?"),p)
+    else: update_p(input("Quel déplacement (z,q,s ou d stp)?"),p)
     return p
 
 
